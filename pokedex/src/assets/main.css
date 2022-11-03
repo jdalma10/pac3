@@ -1,0 +1,200 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0 !important;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
+
+:root{
+  --bg-color:#fff;
+  --text-color:#222;
+ }
+ 
+ /*mode*/
+ 
+ body.light, .jumbotron.light, .modal.light{
+     --bg-color:#fff !important;
+     --text-color:#272727;
+     
+ }
+ 
+ body.dark, .jumbotron.dark, .model.dark{
+     --bg-color:#272727;
+     --text-color:#fff;
+ }
+ 
+ 
+ /* Estils generals */
+ 
+ body{
+     background-color: var(--bg-color);
+     color: var(--text-color);
+ }
+
+ a{
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+ 
+ nav{
+     margin-bottom: 80px;
+ }
+ 
+ p{text-align: justify;}
+/*  img{width:  10rem;}
+ */ 
+ footer{
+     background-color: #333;
+     min-height: 100px;
+     width: 100% !important;
+ }
+ 
+ 
+ /* Classes */
+ 
+ .jumbotron{
+     background-color:var(--bg-color);
+ }
+ .left{
+     float:left;
+     margin-right: 50px;
+ }
+ .clear{
+     clear:both;
+ }
+ .eti{
+     font-weight: bold ;
+ } 
+ 
+ 
+ .mlateral{
+     position: sticky;top: 45px; display: block;
+ }
+ 
+ .card-list{
+     display: grid;
+   grid-template-columns: repeat(3, 1fr);
+ }
+ 
+ .card {
+     border: 1px solid var(--text-color);
+     margin: 1em;
+    /*  display: flex;
+     flex-direction: row; */
+     box-shadow: 1px 2px 6px #888;
+     padding: 2em;
+ 
+ }
+ 
+ .card:hover{
+     box-shadow: 2px 4px 12px #888;
+ }
+ 
+ .card-title{
+     text-align: center;
+     text-transform: capitalize;
+     display: inline;
+     vertical-align: middle;
+ }
+ 
+ 
+ .navbar-default{
+     background-color: var(--bg-color) !important;
+     color: var(--text-color);
+     box-shadow: 1px 1px 12px #555;
+ }
+ 
+ .card-type{
+     color: #fff!important;
+    
+     width: 100%;
+     text-align: center!important;
+   
+ }
+ 
+ 
+ 
+ /* Id */
+ #main{
+     margin: 50px;
+ }
+ 
+ 
+ 
+ 
+ /* Modal*/
+ 
+ /* The Modal (background) */
+ .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   
+   /* Modal Content/Box */
+   .modal-content {
+     background-color: var(--bg-color);
+     color: var(--text-color);
+     
+     margin: 15% auto; /* 15% from the top and centered */
+     padding: 20px;
+     border: 1px solid #888;
+     width: 35%; /* Could be more or less, depending on screen size */
+   }
+   
+   /* The Close Button */
+   .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+   }
+ 
+  
+ 
+ 
+ 
