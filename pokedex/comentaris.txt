@@ -1,0 +1,48 @@
+Bona manera de trobar l'id a partir la url
+Ben trobat el light/dark mode i guardar-lo a local storage
+La manera de mostrar la informació adicional es podria fer en una vista nova, però no està gens mal pensat com ho has plantejat!
+Molt bé el filtre!
+
+Comentaris/alternatives:
+
+Per mostrar el resultat de la lluita, en comptes d'un alert, es pot utilitzar una variable que mostri el missatge, per exemple definir a data() una variable msg=''
+I actualitzar el valor del missatge en funció del resultat de la lluita: msg=´${nomPoke1} lluita contra ${nomPoke2} i guanya`. Ja que captures els valors d'atac i defensa de la carta
+al fer clic, també pots capturar els noms dels pokemons que lluiten.
+
+<p>{{ msg }}</p>
+
+
+
+
+La comprovació per mostrar elements en funció d'un valor es podria fer sobre una sola variable booleana
+
+aquet codi: 
+this.count++;
+if (this.count == 1) {
+  this.front = false;
+  this.back = true;
+} else {
+  this.front = true;
+  this.back = false;
+  this.count = 0;
+}
+
+es podria optimitzar utilitzant una única variable isFront:true definida a data(). Llavors només cal comparar sobre aquesta variable, i convertir-la a true o false segons ens convingui.
+Un element boolea es pot negar, i automàticament passa a ser el valor contrari. Per exemple !true és igual a false, i !false és igual a true. Per tant, es podria fer:
+
+gira(){
+  this.isFront = !this.isFront
+}
+
+d'aquest manera, cada cop que es cridi la funció gira(), s'intercanviarà el valor de la variable isFront, sigui quin sigui el seu estat actual.
+
+I de cara al template, es pot utilitzar v-if / else
+
+<div class="front" v-if="isFront">...</div>
+
+<div class="back" v-else>...</div>
+
+
+
+
+
